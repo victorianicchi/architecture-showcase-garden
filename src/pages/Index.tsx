@@ -1,7 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
+import { useState } from "react";
+import { translations } from "@/utils/translations";
 
 const Index = () => {
+  const [language, setLanguage] = useState<"en" | "es">("en");
+  const t = translations[language];
+
   const projects = [
     {
       title: "Urban Harmony Center",
@@ -26,8 +31,8 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-inter">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-green-50 font-inter">
+      <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
       <section className="h-screen relative flex items-center justify-center">
@@ -36,16 +41,16 @@ const Index = () => {
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/40 to-green-900/40" />
         <div className="relative text-center text-white animate-fadeIn">
-          <h1 className="font-playfair text-5xl md:text-7xl mb-4">John Architect</h1>
-          <p className="text-xl md:text-2xl">Creating spaces that inspire</p>
+          <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
+          <p className="text-xl md:text-2xl">{t.tagline}</p>
         </div>
       </section>
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 container mx-auto px-4">
-        <h2 className="font-playfair text-4xl mb-12 text-center">Featured Projects</h2>
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -54,15 +59,15 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-gradient-to-br from-green-50 to-pink-50">
         <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl mb-12 text-center">About Me</h2>
+          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
           <div className="max-w-2xl mx-auto">
             <p className="text-gray-600 leading-relaxed mb-6">
-              With over 15 years of experience in architectural design, I specialize in creating sustainable and innovative spaces that harmoniously blend with their environment. My approach combines modern technological solutions with timeless design principles.
+              {t.aboutText1}
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Each project is an opportunity to push boundaries and create something truly unique. I believe in the power of architecture to transform communities and enhance people's lives through thoughtful, sustainable design.
+              {t.aboutText2}
             </p>
           </div>
         </div>
@@ -70,16 +75,16 @@ const Index = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 container mx-auto px-4">
-        <h2 className="font-playfair text-4xl mb-12 text-center">Get in Touch</h2>
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.contact}</h2>
         <div className="max-w-md mx-auto text-center">
           <p className="text-gray-600 mb-8">
-            Interested in working together? Let's discuss your project.
+            {t.contactText}
           </p>
           <a
-            href="mailto:contact@johnarchitect.com"
-            className="inline-block bg-black text-white px-8 py-3 rounded hover:bg-gray-800 transition-colors"
+            href="mailto:contact@victorianicchi.com"
+            className="inline-block bg-gradient-to-r from-pink-500 to-green-500 text-white px-8 py-3 rounded hover:from-pink-600 hover:to-green-600 transition-all duration-300"
           >
-            Contact Me
+            {t.contactButton}
           </a>
         </div>
       </section>

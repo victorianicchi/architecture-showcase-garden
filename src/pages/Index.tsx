@@ -38,7 +38,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100/40 via-white to-green-100/40 font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-pink-200 via-white to-green-200 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -58,7 +58,7 @@ const Index = () => {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 container mx-auto px-4">
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col space-y-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

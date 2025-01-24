@@ -57,27 +57,16 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
       {additionalImages && (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogContent className="max-w-4xl">
-            <div className="relative">
-              <img
-                src={allImages[currentImageIndex]}
-                alt={`${title} - Image ${currentImageIndex + 1}`}
-                className="w-full h-auto"
-              />
-              <button
-                onClick={(e) => { e.stopPropagation(); prevImage(); }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
-              >
-                ←
-              </button>
-              <button
-                onClick={(e) => { e.stopPropagation(); nextImage(); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
-              >
-                →
-              </button>
-              <p className="text-center mt-2 text-sm text-gray-500">
-                Image {currentImageIndex + 1} of {allImages.length}
-              </p>
+            <div className="flex flex-col space-y-4">
+              {allImages.map((img, index) => (
+                <div key={index} className="relative">
+                  <img
+                    src={img}
+                    alt={`${title} - Image ${index + 1}`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
             </div>
           </DialogContent>
         </Dialog>

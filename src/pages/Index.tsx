@@ -31,7 +31,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-green-50 font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-white to-green-100 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -41,7 +41,7 @@ const Index = () => {
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/40 to-green-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/60 to-green-500/60" />
         <div className="relative text-center text-white animate-fadeIn">
           <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
           <p className="text-xl md:text-2xl">{t.tagline}</p>
@@ -59,16 +59,16 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gradient-to-br from-green-50 to-pink-50">
+      <section id="about" className="py-20 bg-gradient-to-br from-green-100 to-pink-100">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-gray-600 leading-relaxed mb-6">
-              {t.aboutText1}
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              {t.aboutText2}
-            </p>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {t.aboutSections.map((section, index) => (
+              <div key={index} className="text-gray-600 leading-relaxed">
+                <h3 className="font-playfair text-2xl mb-4 text-gray-800">{section.title}</h3>
+                <p className="mb-6">{section.content}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

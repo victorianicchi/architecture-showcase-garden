@@ -9,9 +9,16 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Urban Harmony Center",
-      description: "A modern cultural center that blends with its surroundings",
-      image: "https://images.unsplash.com/photo-1433832597046-4f10e10ac764",
+      title: "Primary School",
+      description: "Living school integrated with nature",
+      image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",
+      additionalImages: [
+        "/lovable-uploads/40d2025a-f143-410b-b8cc-5e182aa6bd6b.png",
+        "/lovable-uploads/0c0b16c8-1e27-46d3-a58a-14085e583114.png",
+        "/lovable-uploads/e083b154-ee8e-4aca-9079-e877ea4cd873.png",
+        "/lovable-uploads/7b3c6746-9722-437e-ab21-e0c7b2d0b224.png",
+        "/lovable-uploads/a732d442-8d20-472d-8a60-45903c5f35b4.png"
+      ]
     },
     {
       title: "Floating Pavilion",
@@ -31,7 +38,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-white to-green-100 font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100/40 via-white to-green-100/40 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -41,7 +48,7 @@ const Index = () => {
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/60 to-green-500/60" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative text-center text-white animate-fadeIn">
           <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
           <p className="text-xl md:text-2xl">{t.tagline}</p>

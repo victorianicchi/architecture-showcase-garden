@@ -10,6 +10,24 @@ const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
   const t = translations[language];
 
+  const inspirations = [
+    {
+      title: "Travel Photography",
+      description: "Capturing architectural wonders around the world",
+      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b"
+    },
+    {
+      title: "Pinterest Collections",
+      description: "Curated boards of innovative designs",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+    },
+    {
+      title: "Creative Sketches",
+      description: "Hand-drawn architectural concepts",
+      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be"
+    }
+  ];
+
   const projects = [
     {
       title: "Primary School",

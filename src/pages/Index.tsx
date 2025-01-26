@@ -74,31 +74,31 @@ const Index = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="h-screen relative flex items-center justify-between px-8"
+        className="h-screen flex items-center justify-center px-8"
       >
-        <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <motion.div 
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="relative text-white flex-1"
-        >
-          <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
-          <p className="text-xl md:text-2xl">{t.tagline}</p>
-        </motion.div>
-        <motion.img
-          src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
-          alt="Decorative"
-          className="relative w-64 h-64 object-cover rounded-full hidden md:block"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-        />
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-gray-800 flex-1 text-center md:text-left"
+          >
+            <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
+            <p className="text-xl md:text-2xl">{t.tagline}</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="flex-1 flex justify-center md:justify-end"
+          >
+            <img
+              src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+              alt="Victoria Nicchi"
+              className="w-80 h-80 object-cover rounded-lg shadow-xl"
+            />
+          </motion.div>
+        </div>
       </motion.section>
 
       {/* Portfolio Section */}

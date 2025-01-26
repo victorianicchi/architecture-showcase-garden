@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useState } from "react";
 import { translations } from "@/utils/translations";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
@@ -37,6 +38,24 @@ const Index = () => {
     },
   ];
 
+  const inspirations: { title: string; description: string; image: string }[] = [
+    {
+      title: "Travel Photography",
+      description: "Upload and showcase photos from your architectural travels",
+      image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2",
+    },
+    {
+      title: "Pinterest Collections",
+      description: "Share your curated Pinterest boards and design inspirations",
+      image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d",
+    },
+    {
+      title: "Creative Explorations",
+      description: "A space for sketches, models, and experimental work",
+      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-200 via-white to-green-200 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
@@ -58,10 +77,33 @@ const Index = () => {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 container mx-auto px-4">
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
-        <div className="flex flex-col space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
+        </div>
+      </section>
+
+      {/* Inspiration Section */}
+      <section id="inspiration" className="py-20 bg-gradient-to-br from-green-100 to-pink-100">
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {inspirations.map((item, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                    Upload Content
+                  </button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

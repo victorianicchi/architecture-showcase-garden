@@ -15,6 +15,13 @@ const Index = () => {
       description: "Living school integrated with nature",
       image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",
       additionalImages: [
+        "/lovable-uploads/185bb680-1024-4ff7-ab48-52faea4a9dcf.png",
+        "/lovable-uploads/167c5651-dc25-4a19-a97c-9644c8652be2.png",
+        "/lovable-uploads/2081f99a-3bd3-4d17-9f97-447046c3bc4c.png",
+        "/lovable-uploads/85abcf94-7028-43c5-811b-358506a71cfc.png",
+        "/lovable-uploads/94cfb1e7-a716-4b37-920c-b073551447d6.png",
+        "/lovable-uploads/637c9b15-5a50-4c53-855e-550440187b21.png",
+        "/lovable-uploads/a2e33b0c-ab02-4ca0-a29d-361d7b3b57a0.png",
         "/lovable-uploads/40d2025a-f143-410b-b8cc-5e182aa6bd6b.png",
         "/lovable-uploads/0c0b16c8-1e27-46d3-a58a-14085e583114.png",
         "/lovable-uploads/e083b154-ee8e-4aca-9079-e877ea4cd873.png",

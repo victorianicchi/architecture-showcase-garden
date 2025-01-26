@@ -3,6 +3,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { useState } from "react";
 import { translations } from "@/utils/translations";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
@@ -38,20 +39,20 @@ const Index = () => {
     },
   ];
 
-  const inspirations: { title: string; description: string; image: string }[] = [
+  const inspirations = [
     {
-      title: "Travel Photography",
-      description: "Upload and showcase photos from your architectural travels",
+      title: "Visual Inspiration",
+      description: "Upload and showcase photos from your creative journeys",
       image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2",
     },
     {
-      title: "Pinterest Collections",
-      description: "Share your curated Pinterest boards and design inspirations",
+      title: "Digital Collections",
+      description: "Share your curated digital content and design inspirations",
       image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d",
     },
     {
-      title: "Creative Explorations",
-      description: "A space for sketches, models, and experimental work",
+      title: "Creative Studio",
+      description: "A space for your artistic explorations and experimental work",
       image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
     },
   ];
@@ -61,82 +62,144 @@ const Index = () => {
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
-      <section className="h-screen relative flex items-center justify-center">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="h-screen relative flex items-center justify-center"
+      >
         <img
           src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative text-center text-white animate-fadeIn">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="relative text-center text-white"
+        >
           <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
           <p className="text-xl md:text-2xl">{t.tagline}</p>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 container mx-auto px-4">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="portfolio" 
+        className="py-20 container mx-auto px-4"
+      >
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Inspiration Section */}
-      <section id="inspiration" className="py-20 bg-gradient-to-br from-green-100 to-pink-100">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="inspiration" 
+        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
+      >
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {inspirations.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                <CardHeader>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
-                    Upload Content
-                  </button>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                  <CardHeader>
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                      Upload Content
+                    </button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gradient-to-br from-green-100 to-pink-100">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="about" 
+        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
+      >
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            {t.aboutSections.map((section, index) => (
-              <div key={index} className="text-gray-600 leading-relaxed">
-                <h3 className="font-playfair text-2xl mb-4 text-gray-800">{section.title}</h3>
-                <p className="mb-6">{section.content}</p>
-              </div>
-            ))}
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.img
+              src="/lovable-uploads/e1a4f9f6-44bc-4e98-9fdd-864713db82af.png"
+              alt="Victoria Nicchi"
+              className="rounded-lg shadow-xl w-full max-w-md mx-auto"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            />
+            <div className="space-y-6">
+              {t.aboutSections.map((section, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="text-gray-600 leading-relaxed"
+                >
+                  <h3 className="font-playfair text-2xl mb-4 text-gray-800">{section.title}</h3>
+                  <p className="mb-6">{section.content}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 container mx-auto px-4">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="contact" 
+        className="py-20 container mx-auto px-4"
+      >
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.contact}</h2>
         <div className="max-w-md mx-auto text-center">
           <p className="text-gray-600 mb-8">
             {t.contactText}
           </p>
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href="mailto:contact@victorianicchi.com"
             className="inline-block bg-gradient-to-r from-pink-500 to-green-500 text-white px-8 py-3 rounded hover:from-pink-600 hover:to-green-600 transition-all duration-300"
           >
             {t.contactButton}
-          </a>
+          </motion.a>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

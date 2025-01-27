@@ -69,7 +69,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-pink-200 via-white to-green-200 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
       
-      {/* Hero Section */}
+      {/* Hero Section - Updated image size */}
       <motion.section 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -95,13 +95,13 @@ const Index = () => {
             <img
               src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
               alt="Victoria Nicchi"
-              className="w-96 h-96 object-cover rounded-lg shadow-xl"
+              className="w-[500px] h-[500px] object-cover rounded-lg shadow-xl" // Increased size from w-96 h-96
             />
           </motion.div>
         </div>
       </motion.section>
 
-      {/* About Section */}
+      {/* About Section - Updated layout for better centering */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -110,12 +110,12 @@ const Index = () => {
         className="py-20 container mx-auto px-4"
       >
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+          <div className="flex-1 flex justify-center">
             <img
               src="/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
               alt="Victoria Nicchi"
-              className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+              className="w-full max-w-md rounded-lg shadow-xl"
             />
           </div>
           <div className="flex-1 space-y-6">

@@ -36,100 +36,166 @@ const Index = () => {
       additionalImages: [
         "/lovable-uploads/185bb680-1024-4ff7-ab48-52faea4a9dcf.png",
         "/lovable-uploads/167c5651-dc25-4a19-a97c-9644c8652be2.png",
-        "/lovable-uploads/2081f99a-3bd3-4d17-9f97-447046c3bc4c.png"
+        "/lovable-uploads/2081f99a-3bd3-4d17-9f97-447046c3bc4c.png",
+        "/lovable-uploads/85abcf94-7028-43c5-811b-358506a71cfc.png",
+        "/lovable-uploads/94cfb1e7-a716-4b37-920c-b073551447d6.png",
+        "/lovable-uploads/637c9b15-5a50-4c53-855e-550440187b21.png",
+        "/lovable-uploads/a2e33b0c-ab02-4ca0-a29d-361d7b3b57a0.png",
+        "/lovable-uploads/40d2025a-f143-410b-b8cc-5e182aa6bd6b.png",
+        "/lovable-uploads/0c0b16c8-1e27-46d3-a58a-14085e583114.png",
+        "/lovable-uploads/e083b154-ee8e-4aca-9079-e877ea4cd873.png",
+        "/lovable-uploads/7b3c6746-9722-437e-ab21-e0c7b2d0b224.png",
+        "/lovable-uploads/a732d442-8d20-472d-8a60-45903c5f35b4.png"
       ]
-    }
+    },
+    {
+      title: "Floating Pavilion",
+      description: "An innovative waterfront structure with sustainable features",
+      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
+    },
+    {
+      title: "Desert Oasis Museum",
+      description: "A contemporary museum inspired by traditional architecture",
+      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be",
+    },
+    {
+      title: "Sky Gardens",
+      description: "Vertical gardens integrated into residential towers",
+      image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-pink-200 via-white to-green-200 font-inter">
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 flex items-center justify-between">
-        <div className="w-1/2">
-          <h1 className="text-6xl font-playfair mb-4">{t.name}</h1>
-          <p className="text-2xl text-gray-600">{t.tagline}</p>
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="h-screen flex items-center justify-center px-8"
+      >
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-gray-800 flex-1 text-center md:text-left"
+          >
+            <h1 className="font-playfair text-5xl md:text-7xl mb-4">{t.name}</h1>
+            <p className="text-xl md:text-2xl">{t.tagline}</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="flex-1 flex justify-center md:justify-end"
+          >
+            <img
+              src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+              alt="Victoria Nicchi"
+              className="w-96 h-96 object-cover rounded-lg shadow-xl"
+            />
+          </motion.div>
         </div>
-        <div className="w-1/2">
-          <img 
-            src="/lovable-uploads/94cfb1e7-a716-4b37-920c-b073551447d6.png" 
-            alt="Victoria Nicchi"
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1">
+            <img
+              src="/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
+              alt="Victoria Nicchi"
+              className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+            />
+          </div>
+          <div className="flex-1 space-y-6">
+            <p className="text-lg text-gray-700 whitespace-pre-line">
+              {t.aboutText}
+            </p>
+          </div>
         </div>
-      </div>
+      </motion.section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-playfair mb-8">{t.portfolio}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="portfolio" 
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      {/* About Section */}
-      <section id="about" className="container mx-auto px-4 py-16">
-        <div className="flex gap-8">
-          <div className="w-1/3">
-            <img 
-              src="/lovable-uploads/e1a4f9f6-44bc-4e98-9fdd-864713db82af.png" 
-              alt="Victoria Nicchi"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="w-2/3">
-            <h2 className="text-4xl font-playfair mb-8">{t.about}</h2>
-            {t.aboutSections.map((section, index) => (
-              <div key={index} className="mb-8">
-                <h3 className="text-2xl font-playfair mb-4">{section.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{section.content}</p>
-              </div>
+      {/* Inspiration Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="inspiration" 
+        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {inspirations.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                  <CardHeader>
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                      Upload Content
+                    </button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Inspiration Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-playfair mb-8">Creative Inspiration</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {inspirations.map((inspiration, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>{inspiration.title}</CardTitle>
-                <CardDescription>{inspiration.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <img 
-                  src={inspiration.image} 
-                  alt={inspiration.title}
-                  className="w-full h-48 object-cover rounded-lg"
-                />
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-playfair mb-8">{t.contact}</h2>
-        <div className="flex gap-8">
-          <div className="w-1/2">
-            <ContactForm language={language} />
-          </div>
-          <div className="w-1/2">
-            <img 
-              src="/lovable-uploads/e083b154-ee8e-4aca-9079-e877ea4cd873.png" 
-              alt="Contact"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="contact" 
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.contact}</h2>
+        <div className="max-w-md mx-auto text-center">
+          <p className="text-gray-600 mb-8">
+            {t.contactText}
+          </p>
+          <ContactForm language={language} />
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

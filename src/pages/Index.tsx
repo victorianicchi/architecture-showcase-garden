@@ -113,13 +113,13 @@ const Index = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <img
-              src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+              src="/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
               alt="Victoria Nicchi"
               className="w-full max-w-md mx-auto rounded-lg shadow-xl"
             />
           </div>
           <div className="flex-1 space-y-6">
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 whitespace-pre-line">
               {t.aboutText}
             </p>
           </div>

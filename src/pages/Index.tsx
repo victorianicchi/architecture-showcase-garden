@@ -95,9 +95,34 @@ const Index = () => {
             <img
               src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
               alt="Victoria Nicchi"
-              className="w-80 h-80 object-cover rounded-lg shadow-xl"
+              className="w-96 h-96 object-cover rounded-lg shadow-xl"
             />
           </motion.div>
+        </div>
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1">
+            <img
+              src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+              alt="Victoria Nicchi"
+              className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+            />
+          </div>
+          <div className="flex-1 space-y-6">
+            <p className="text-lg text-gray-700">
+              {t.aboutText}
+            </p>
+          </div>
         </div>
       </motion.section>
 

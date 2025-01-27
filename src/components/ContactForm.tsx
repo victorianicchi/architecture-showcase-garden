@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 
 interface ContactFormProps {
   language: "en" | "es";
@@ -87,26 +87,18 @@ export const ContactForm = ({ language }: ContactFormProps) => {
           rel="noopener noreferrer"
           className="hover:scale-110 transition-transform"
         >
-          <Button variant="outline" size="icon">
-            <Instagram className="h-4 w-4" />
+          <Button variant="outline" size="icon" className="h-12 w-12">
+            <Instagram className="h-6 w-6" />
           </Button>
         </a>
         <a
-          href="https://linkedin.com/in/victoria-nicchi"
+          href="https://www.linkedin.com/in/victoria-nicchi-a32b91209/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 transition-transform"
         >
-          <Button variant="outline" size="icon">
-            <Linkedin className="h-4 w-4" />
-          </Button>
-        </a>
-        <a
-          href="mailto:vickynicchi@gmail.com"
-          className="hover:scale-110 transition-transform"
-        >
-          <Button variant="outline" size="icon">
-            <Mail className="h-4 w-4" />
+          <Button variant="outline" size="icon" className="h-12 w-12">
+            <Linkedin className="h-6 w-6" />
           </Button>
         </a>
       </div>

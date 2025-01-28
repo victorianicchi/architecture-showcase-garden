@@ -66,7 +66,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-200 via-white to-green-200 font-inter">
+    <div className={`min-h-screen ${language === 'es' ? 'bg-gradient-to-br from-[#F2FCE2] via-white to-green-200' : 'bg-gradient-to-br from-pink-200 via-white to-green-200'} font-inter`}>
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -76,7 +76,7 @@ const Index = () => {
         transition={{ duration: 1 }}
         className="min-h-screen flex items-center justify-center px-8"
       >
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -93,7 +93,7 @@ const Index = () => {
             className="flex-1 flex justify-center md:justify-end"
           >
             <img
-              src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+              src={language === 'es' ? "/lovable-uploads/af75e989-9f66-4cf0-b51b-3ff107f40e12.png" : "/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"}
               alt="Victoria Nicchi"
               className="w-[650px] h-[650px] object-cover rounded-lg shadow-xl"
             />

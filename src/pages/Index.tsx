@@ -14,17 +14,17 @@ const Index = () => {
     {
       title: "Travel Photography",
       description: "Capturing architectural wonders around the world",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b"
+      image: "/lovable-uploads/b454fc4e-8b74-4799-a636-2d1e832b729b.png"
     },
     {
       title: "Collections",
       description: "Curated boards of innovative designs",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+      image: "/lovable-uploads/bc5c32e2-679b-412b-8088-cdb0b257da98.png"
     },
     {
       title: "Creative Sketches",
       description: "Hand-drawn architectural concepts",
-      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be"
+      image: "/lovable-uploads/66490511-dcf1-4708-9105-3387f3e3bf27.png"
     }
   ];
 

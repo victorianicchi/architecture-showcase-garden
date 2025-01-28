@@ -66,7 +66,7 @@ const Index = () => {
   ];
 
   return (
-    <div className={`min-h-screen ${language === 'es' ? 'bg-gradient-to-br from-[#F2FCE2] via-white to-green-200' : 'bg-gradient-to-br from-pink-200 via-white to-green-200'} font-inter`}>
+    <div className={`min-h-screen ${language === 'es' ? 'bg-[#F2FCE2]' : 'bg-pink-200'} font-inter`}>
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -98,42 +98,6 @@ const Index = () => {
               className="w-[650px] h-[650px] object-cover rounded-lg shadow-xl"
             />
           </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Creative Inspiration Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        id="inspiration" 
-        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {inspirations.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                  <CardHeader>
-                    <CardTitle>{item.title}</CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
-                      Upload Content
-                    </button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </motion.section>
 
@@ -177,6 +141,42 @@ const Index = () => {
                 <h3 className="font-playfair text-2xl text-gray-800">{section.title}</h3>
                 <p className="text-gray-700">{section.content}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Creative Inspiration Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="inspiration" 
+        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {inspirations.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                  <CardHeader>
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                      Upload Content
+                    </button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>

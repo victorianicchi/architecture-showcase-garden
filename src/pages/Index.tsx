@@ -101,52 +101,7 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* About Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="py-20 container mx-auto px-4"
-      >
-        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
-          <div className="flex-1 flex justify-center">
-            <img
-              src="/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
-              alt="Victoria Nicchi"
-              className="w-full max-w-md rounded-lg shadow-xl"
-            />
-          </div>
-          <div className="flex-1 space-y-8">
-            {t.aboutSections.map((section, index) => (
-              <div key={index} className="space-y-3">
-                <h3 className="font-playfair text-2xl text-gray-800">{section.title}</h3>
-                <p className="text-gray-700">{section.content}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Portfolio Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        id="portfolio" 
-        className="py-20 container mx-auto px-4"
-      >
-        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Inspiration Section */}
+      {/* Creative Inspiration Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -177,6 +132,51 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Portfolio Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="portfolio" 
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.about}</h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+          <div className="flex-1 flex justify-center">
+            <img
+              src="/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
+              alt="Victoria Nicchi"
+              className="w-full max-w-md rounded-lg shadow-xl"
+            />
+          </div>
+          <div className="flex-1 space-y-8">
+            {t.aboutSections.map((section, index) => (
+              <div key={index} className="space-y-3">
+                <h3 className="font-playfair text-2xl text-gray-800">{section.title}</h3>
+                <p className="text-gray-700">{section.content}</p>
+              </div>
             ))}
           </div>
         </div>

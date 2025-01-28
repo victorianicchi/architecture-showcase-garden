@@ -17,7 +17,7 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b"
     },
     {
-      title: "Pinterest Collections",
+      title: "Collections",
       description: "Curated boards of innovative designs",
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625"
     },
@@ -74,7 +74,7 @@ const Index = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="h-screen flex items-center justify-center px-8"
+        className="min-h-screen flex items-center justify-center px-8"
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           <motion.div 
@@ -95,7 +95,7 @@ const Index = () => {
             <img
               src="/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
               alt="Victoria Nicchi"
-              className="w-[600px] h-[600px] object-cover rounded-lg shadow-xl"
+              className="w-[650px] h-[650px] object-cover rounded-lg shadow-xl"
             />
           </motion.div>
         </div>

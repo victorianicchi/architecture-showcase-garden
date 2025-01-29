@@ -23,10 +23,11 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
   }, []);
 
   const bgColor = language === 'es' ? 'bg-[#F2FCE2]' : 'bg-[#FFDEE2]';
+  const borderColor = language === 'es' ? 'border-[#F2FCE2]' : 'border-[#FFDEE2]';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? `py-2 ${bgColor}/95 backdrop-blur-sm shadow-sm` : 'py-4 bg-transparent'
+    <nav className={`fixed w-full z-50 transition-all duration-300 border-t-4 ${borderColor} ${
+      scrolled ? `py-2 ${bgColor}/95 backdrop-blur-sm shadow-sm` : `py-4 ${bgColor}`
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="text-xl font-playfair text-gray-800 transition-all">

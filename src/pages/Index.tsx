@@ -65,6 +65,8 @@ const Index = () => {
     },
   ];
 
+  const borderColorClass = language === 'es' ? 'border-[#D8E8CC]' : 'border-[#E6C5C9]';
+
   return (
     <div className={`min-h-screen ${language === 'es' ? 'bg-[#F2FCE2]' : 'bg-[#FFDEE2]'} font-inter`}>
       <Navigation language={language} onLanguageChange={setLanguage} />
@@ -164,7 +166,7 @@ const Index = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
-                <Card className={`overflow-hidden hover:shadow-lg transition-shadow border-${language === 'es' ? '[#F2FCE2]' : '[#FFDEE2]'}`}>
+                <Card className={`overflow-hidden hover:shadow-lg transition-shadow ${borderColorClass}`}>
                   <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
                   <CardHeader>
                     <CardTitle>{item.title}</CardTitle>

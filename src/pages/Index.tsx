@@ -164,7 +164,7 @@ const Index = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card className={`overflow-hidden hover:shadow-lg transition-shadow border-${language === 'es' ? '[#F2FCE2]' : '[#FFDEE2]'}`}>
                   <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
                   <CardHeader>
                     <CardTitle>{item.title}</CardTitle>
@@ -177,7 +177,6 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Contact Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

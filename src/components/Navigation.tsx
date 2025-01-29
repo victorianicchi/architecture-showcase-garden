@@ -22,9 +22,11 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const bgColor = language === 'es' ? 'bg-[#F2FCE2]' : 'bg-[#FFDEE2]';
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'py-2 bg-white/95 backdrop-blur-sm shadow-sm' : 'py-4 bg-transparent'
+      scrolled ? `py-2 ${bgColor}/95 backdrop-blur-sm shadow-sm` : 'py-4 bg-transparent'
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="text-xl font-playfair text-gray-800 transition-all">
@@ -66,7 +68,7 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm md:hidden">
+          <div className={`absolute top-full left-0 right-0 ${bgColor}/95 backdrop-blur-sm md:hidden`}>
             <div className="flex flex-col items-center space-y-4 py-4">
               <a href="#portfolio" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.portfolio}</a>
               <a href="#about" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.about}</a>

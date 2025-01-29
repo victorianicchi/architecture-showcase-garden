@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { 
   Dialog,
   DialogContent,
@@ -25,8 +25,7 @@ export const ContactForm = ({ language }: ContactFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically integrate with an email service
-    // For now, we'll just open the default mail client
+    // Create mailto link with form data
     const mailtoLink = `mailto:vickynicchi@gmail.com?subject=Portfolio Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
     window.location.href = mailtoLink;
     

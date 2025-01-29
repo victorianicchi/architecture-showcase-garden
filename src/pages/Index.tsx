@@ -17,6 +17,18 @@ const Index = () => {
       image: "/lovable-uploads/b454fc4e-8b74-4799-a636-2d1e832b729b.png"
     },
     {
+      title: "London Architecture",
+      description: "A blend of historic and modern architectural marvels",
+      image: "/lovable-uploads/67da4438-958e-4ec4-8913-5d29d5dd4203.png",
+      additionalImages: [
+        "/lovable-uploads/ad3a7f28-485c-4d60-bfba-4c4f95bb9f8b.png",
+        "/lovable-uploads/d8ab12ec-f12a-4b4e-a290-bd28a5506f53.png",
+        "/lovable-uploads/e767e657-9573-48a3-8f6f-4e1ca09dbf26.png",
+        "/lovable-uploads/bd7bcecd-a300-4671-a10b-c90ca25a75e9.png",
+        "/lovable-uploads/6e59abf6-ced5-4b8d-a5cb-04b9329d5467.png"
+      ]
+    },
+    {
       title: "Collections",
       description: "Curated boards of innovative designs",
       image: "/lovable-uploads/bc5c32e2-679b-412b-8088-cdb0b257da98.png"

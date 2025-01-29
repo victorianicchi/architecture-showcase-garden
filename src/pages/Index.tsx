@@ -66,7 +66,7 @@ const Index = () => {
   ];
 
   return (
-    <div className={`min-h-screen ${language === 'es' ? 'bg-[#F2FCE2]' : 'bg-pink-200'} font-inter`}>
+    <div className={`min-h-screen ${language === 'es' ? 'bg-[#F2FCE2]' : 'bg-[#FFDEE2]'} font-inter`}>
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
@@ -153,7 +153,7 @@ const Index = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         id="inspiration" 
-        className="py-20 bg-gradient-to-br from-green-100 to-pink-100"
+        className="py-20"
       >
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">Creative Inspiration</h2>

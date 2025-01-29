@@ -38,6 +38,7 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
         <div className="hidden md:flex items-center space-x-8 font-inter">
           <a href="#portfolio" className="hover:text-pink-600 transition-colors">{t.portfolio}</a>
           <a href="#about" className="hover:text-pink-600 transition-colors">{t.about}</a>
+          <a href="#inspiration" className="hover:text-pink-600 transition-colors">{t.creative}</a>
           <a href="#contact" className="hover:text-pink-600 transition-colors">{t.contact}</a>
           <button
             onClick={() => onLanguageChange(language === "en" ? "es" : "en")}
@@ -54,6 +55,7 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
             <div className="flex flex-col items-center space-y-4 py-4">
               <a href="#portfolio" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.portfolio}</a>
               <a href="#about" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.about}</a>
+              <a href="#inspiration" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.creative}</a>
               <a href="#contact" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.contact}</a>
             </div>
           </div>

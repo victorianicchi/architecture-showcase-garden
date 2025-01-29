@@ -100,7 +100,7 @@ const Index = () => {
           </motion.div>
         </div>
       </motion.section>
-
+      
       {/* Portfolio Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ const Index = () => {
           ))}
         </div>
       </motion.section>
-
+      
       {/* About Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
@@ -170,11 +170,6 @@ const Index = () => {
                     <CardTitle>{item.title}</CardTitle>
                     <CardDescription>{item.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <button className="w-full bg-gradient-to-r from-pink-500 to-green-500 text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
-                      Upload Content
-                    </button>
-                  </CardContent>
                 </Card>
               </motion.div>
             ))}

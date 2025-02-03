@@ -1,5 +1,14 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { motion } from "framer-motion";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { Link } from "react-router-dom";
 
 const TravelPhotography = () => {
   const albums = [
@@ -37,14 +46,29 @@ const TravelPhotography = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background p-8">
+    <div className="min-h-screen bg-[#FFDEE2] p-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto"
       >
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to="/">Home</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Travel Photography</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
         <h1 className="font-playfair text-4xl mb-12 text-center">Travel Photography</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {albums.map((album, index) => (
             <ProjectCard
               key={index}

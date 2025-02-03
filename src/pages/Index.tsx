@@ -40,6 +40,30 @@ const Index = () => {
         {
           title: "London Skyline",
           image: "/lovable-uploads/6e59abf6-ced5-4b8d-a5cb-04b9329d5467.png"
+        },
+        {
+          title: "Modern Contrast",
+          image: "/lovable-uploads/3453e1a4-0e5a-4f94-a5f8-b2c37b5465d5.png"
+        },
+        {
+          title: "City Views",
+          image: "/lovable-uploads/0bb0aa57-f0e7-49f9-bb83-14d676279cb1.png"
+        },
+        {
+          title: "Urban Patterns",
+          image: "/lovable-uploads/a05eaa1e-3889-4edc-bd0c-51c811837bf8.png"
+        },
+        {
+          title: "City Layers",
+          image: "/lovable-uploads/a0b8dbb5-7d72-44f9-bfd0-6aa53af621a0.png"
+        },
+        {
+          title: "Historic Meets Modern",
+          image: "/lovable-uploads/e9e2d828-9091-4d71-aa7d-aa50e597c6e5.png"
+        },
+        {
+          title: "Urban Composition",
+          image: "/lovable-uploads/8132390f-73e7-4739-881a-5d7506494c63.png"
         }
       ]
     },
@@ -193,13 +217,13 @@ const Index = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
-                <Card className={`overflow-hidden hover:shadow-lg transition-shadow ${borderColorClass}`}>
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                  <CardHeader>
-                    <CardTitle>{item.title}</CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
-                  </CardHeader>
-                </Card>
+                <ProjectCard
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                  additionalImages={item.additionalImages?.map(img => img.image)}
+                  className={`overflow-hidden hover:shadow-lg transition-shadow ${borderColorClass}`}
+                />
               </motion.div>
             ))}
           </div>

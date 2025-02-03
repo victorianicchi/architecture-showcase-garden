@@ -11,6 +11,7 @@ interface ProjectCardProps {
   image: string;
   additionalImages?: string[];
   className?: string;
+  children?: React.ReactNode;  // Added this line
 }
 
 interface Comment {
@@ -18,7 +19,7 @@ interface Comment {
   timestamp: Date;
 }
 
-export const ProjectCard = ({ title, description, image, additionalImages, className }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, image, additionalImages, className, children }: ProjectCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [likes, setLikes] = useState(0);
   const [comments, setComments] = useState<Comment[]>([]);
@@ -112,6 +113,7 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
             </div>
           )}
         </div>
+        {children}  {/* Added this line */}
       </div>
 
       {additionalImages && (

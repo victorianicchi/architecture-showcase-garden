@@ -1,5 +1,4 @@
 import { ProjectCard } from "@/components/ProjectCard";
-import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 const TravelPhotography = () => {

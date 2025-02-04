@@ -1,5 +1,6 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { motion } from "framer-motion";
+import { Navigation } from "@/components/Navigation";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,8 +10,10 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const TravelPhotography = () => {
+  const [language, setLanguage] = useState<"en" | "es">("en");
   const albums = [
     {
       title: "London",
@@ -46,41 +49,44 @@ const TravelPhotography = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFDEE2] p-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-7xl mx-auto"
-      >
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Travel Photography</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+    <div className="min-h-screen bg-[#FFDEE2]">
+      <Navigation language={language} onLanguageChange={setLanguage} />
+      <div className="p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto"
+        >
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Travel Photography</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
-        <h1 className="font-playfair text-4xl mb-12 text-center">Travel Photography</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {albums.map((album, index) => (
-            <ProjectCard
-              key={index}
-              title={album.title}
-              description={album.description}
-              image={album.coverImage}
-              additionalImages={album.images}
-              className="aspect-square"
-            />
-          ))}
-        </div>
-      </motion.div>
+          <h1 className="font-playfair text-4xl mb-12 text-center">Travel Photography</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {albums.map((album, index) => (
+              <ProjectCard
+                key={index}
+                title={album.title}
+                description={album.description}
+                image={album.coverImage}
+                additionalImages={album.images}
+                className="aspect-square"
+              />
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

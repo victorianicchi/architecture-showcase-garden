@@ -32,6 +32,26 @@ const Index = () => {
 
   const projects = [
     {
+      title: "Cultural Center",
+      description: "A modern cultural space integrating library, exhibition areas, and multipurpose rooms with natural light and vegetation",
+      image: "/lovable-uploads/af72bd70-5c71-4950-9269-3c0db1ccb657.png",
+      additionalImages: [
+        "/lovable-uploads/a48a4c49-7835-4e46-80a7-19177a4a18c8.png",
+        "/lovable-uploads/82c530e3-7517-4fa7-802f-1bc1d5a0280c.png",
+        "/lovable-uploads/86195f59-bf43-43d5-ae80-bd5b88a6ae00.png",
+        "/lovable-uploads/d8134135-5345-4dc6-9ff9-1a005fe07f93.png",
+        "/lovable-uploads/1a1b77cc-e05e-4a66-81d7-d2c07629863e.png",
+        "/lovable-uploads/af175f4d-58e6-4f2c-a8e8-05b5764b8bbc.png",
+        "/lovable-uploads/93820bdc-10b9-4308-b259-5bb4ed18c8d8.png",
+        "/lovable-uploads/29a7eb48-f514-4872-a587-2e1bfa207c02.png",
+        "/lovable-uploads/1a9b32ed-0b08-449d-8479-174dd833cf66.png",
+        "/lovable-uploads/50be0e76-43b8-4dd4-b3f0-589253430d24.png",
+        "/lovable-uploads/d5616865-1031-4fc0-8eae-f1a27ea6799d.png",
+        "/lovable-uploads/ecfa2e72-4b9d-4d5a-959f-d316150f004f.png",
+        "/lovable-uploads/d7277869-172b-4da6-af7b-2cd846a21cd5.png"
+      ]
+    },
+    {
       title: "Primary School",
       description: "Living school integrated with nature",
       image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",

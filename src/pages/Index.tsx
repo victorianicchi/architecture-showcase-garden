@@ -62,6 +62,18 @@ const Index = () => {
       ]
     },
     {
+      title: "Building in Buenos Aires City",
+      description: "An acoustic eco-oasis located in Buenos Aires' Microcenter, featuring a layered architectural approach with a protective glass shield, native vegetation, and a cultural center that revitalizes the urban space",
+      image: "/lovable-uploads/b484ef0e-25c2-4af9-bff8-89e8b35a4c3a.png",
+      additionalImages: [
+        "/lovable-uploads/7465b23e-10ad-4ec5-bc8e-f19443549ca9.png",
+        "/lovable-uploads/620b9a4e-d4cc-4ef7-8403-223fccf8b854.png",
+        "/lovable-uploads/96654a96-2dab-4d9a-bffd-646388832798.png",
+        "/lovable-uploads/dee431ca-b886-4aac-9ff9-fe92aee6a8f1.png",
+        "/lovable-uploads/4fa364cc-05c2-4d1a-b41a-22e2e989aa9d.png"
+      ]
+    },
+    {
       title: "Primary School",
       description: "Living school integrated with nature",
       image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",

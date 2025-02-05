@@ -74,6 +74,18 @@ const Index = () => {
       ]
     },
     {
+      title: "Apartment Remodeling",
+      description: "A minimalist apartment renovation featuring open spaces, natural light, and custom wooden furniture. The design incorporates a seamless blend of living, working, and relaxation areas with panoramic city views",
+      image: "/lovable-uploads/146f99da-70a0-4074-be9a-8001489f756b.png",
+      additionalImages: [
+        "/lovable-uploads/ff5b9f7b-5649-463f-91bc-e76f536ffebf.png",
+        "/lovable-uploads/ea8a0489-fb30-44a6-8337-52d89378b807.png",
+        "/lovable-uploads/e630c78c-92f2-47d4-afdf-8393b9df0076.png",
+        "/lovable-uploads/72c22810-6549-425f-9a1d-36add7c0a562.png",
+        "/lovable-uploads/e363cdf1-9f38-4050-8f16-6c35492389d5.png"
+      ]
+    },
+    {
       title: "Primary School",
       description: "Living school integrated with nature",
       image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",

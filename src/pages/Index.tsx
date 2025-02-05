@@ -46,7 +46,7 @@ const Index = () => {
         "/lovable-uploads/af175f4d-58e6-4f2c-a8e8-05b5764b8bbc.png",
         "/lovable-uploads/93820bdc-10b9-4308-b259-5bb5ed18c8d8.png",
         "/lovable-uploads/29a7eb48-f514-4872-a587-2e1bfa207c02.png",
-        "/lovable-uploads/1a9b32ed-0b08-449d-8479-174dd833cf66.png",
+        "/lovable-uploads/1a1b32ed-0b08-449d-8479-174dd833cf66.png",
         "/lovable-uploads/50be0e76-43b8-4dd4-b3f0-589253430d24.png",
         "/lovable-uploads/d5616865-1031-4fc0-8eae-f1a27ea6799d.png",
         "/lovable-uploads/ecfa2e72-4b9d-4d5a-959f-d316150f004f.png"
@@ -55,7 +55,7 @@ const Index = () => {
     {
       title: "Cell Mitosis",
       description: "A residential complex of 10 units along the Río Luján in Tigre, featuring symmetrical encounters and shared spaces that promote community interaction while preserving privacy",
-      image: "/lovable-uploads/b5c99c44-9888-4d54-9cf0-07a14eeb31a0.png",
+      image: "/lovable-uploads/d092e0ed-e994-43fc-b0d6-d3450488913d.png",
       additionalImages: [
         "/lovable-uploads/686580b6-9c26-4688-9e7e-447118bfca59.png",
         "/lovable-uploads/53012cae-45bb-445d-8cdc-b595e04ac38b.png"

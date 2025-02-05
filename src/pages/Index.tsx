@@ -54,8 +54,8 @@ const Index = () => {
     },
     {
       title: "Cell Mitosis",
-      description: "A residential project in Tigre, Buenos Aires, featuring modular living units integrated with nature",
-      image: "/lovable-uploads/c331a047-ef3d-4030-948e-e7aca1b79d68.png",
+      description: "A residential complex of 10 units along the Río Luján in Tigre, featuring symmetrical encounters and shared spaces that promote community interaction while preserving privacy",
+      image: "/lovable-uploads/b5c99c44-9888-4d54-9cf0-07a14eeb31a0.png",
       additionalImages: [
         "/lovable-uploads/686580b6-9c26-4688-9e7e-447118bfca59.png",
         "/lovable-uploads/53012cae-45bb-445d-8cdc-b595e04ac38b.png"

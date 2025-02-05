@@ -44,12 +44,21 @@ const Index = () => {
         "/lovable-uploads/d8134135-5345-4dc6-9ff9-1a005fe07f93.png",
         "/lovable-uploads/1a1b77cc-e05e-4a66-81d7-d2c07629863e.png",
         "/lovable-uploads/af175f4d-58e6-4f2c-a8e8-05b5764b8bbc.png",
-        "/lovable-uploads/93820bdc-10b9-4308-b259-5bb4ed18c8d8.png",
+        "/lovable-uploads/93820bdc-10b9-4308-b259-5bb5ed18c8d8.png",
         "/lovable-uploads/29a7eb48-f514-4872-a587-2e1bfa207c02.png",
         "/lovable-uploads/1a9b32ed-0b08-449d-8479-174dd833cf66.png",
         "/lovable-uploads/50be0e76-43b8-4dd4-b3f0-589253430d24.png",
         "/lovable-uploads/d5616865-1031-4fc0-8eae-f1a27ea6799d.png",
         "/lovable-uploads/ecfa2e72-4b9d-4d5a-959f-d316150f004f.png"
+      ]
+    },
+    {
+      title: "Cell Mitosis",
+      description: "A residential project in Tigre, Buenos Aires, featuring modular living units integrated with nature",
+      image: "/lovable-uploads/c331a047-ef3d-4030-948e-e7aca1b79d68.png",
+      additionalImages: [
+        "/lovable-uploads/686580b6-9c26-4688-9e7e-447118bfca59.png",
+        "/lovable-uploads/53012cae-45bb-445d-8cdc-b595e04ac38b.png"
       ]
     },
     {
@@ -232,5 +241,3 @@ const Index = () => {
     </div>
   );
 };
-
-export default Index;

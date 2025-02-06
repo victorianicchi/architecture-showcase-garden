@@ -34,7 +34,7 @@ const Index = () => {
     {
       title: "Cultural Center",
       description: "A modern cultural space integrating library, exhibition areas, and multipurpose rooms with natural light and vegetation",
-      image: "/lovable-uploads/9bf952ba-57ca-4441-b45d-ffa87cf9653c.png",
+      image: "/lovable-uploads/0b08387d-0053-4fb3-95ee-3ac278a64dfe.png",
       additionalImages: [
         "/lovable-uploads/b65d3e67-5f8f-4a23-9c99-49855f610530.png",
         "/lovable-uploads/af72bd70-5c71-4950-9269-3c0db1ccb657.png",

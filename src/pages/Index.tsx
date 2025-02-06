@@ -55,7 +55,7 @@ const Index = () => {
     {
       title: "Cell Mitosis",
       description: "A residential complex of 10 units along the Río Luján in Tigre, featuring symmetrical encounters and shared spaces that promote community interaction while preserving privacy",
-      image: "/lovable-uploads/d092e0ed-e994-43fc-b0d6-d3450488913d.png",
+      image: "/lovable-uploads/f06608db-7dd9-490f-8999-f0009bd1fc15.png",
       additionalImages: [
         "/lovable-uploads/686580b6-9c26-4688-9e7e-447118bfca59.png",
         "/lovable-uploads/53012cae-45bb-445d-8cdc-b595e04ac38b.png"

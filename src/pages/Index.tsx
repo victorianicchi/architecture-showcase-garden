@@ -110,22 +110,7 @@ const Index = () => {
         "/lovable-uploads/7b3c6746-9722-437e-ab21-e0c7b2d0b224.png",
         "/lovable-uploads/a732d442-8d20-472d-8a60-45903c5f35b4.png"
       ]
-    },
-    {
-      title: "Floating Pavilion",
-      description: "An innovative waterfront structure with sustainable features",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
-    },
-    {
-      title: "Desert Oasis Museum",
-      description: "A contemporary museum inspired by traditional architecture",
-      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be",
-    },
-    {
-      title: "Sky Gardens",
-      description: "Vertical gardens integrated into residential towers",
-      image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
-    },
+    }
   ];
 
   const borderColorClass = language === 'es' ? 'border-[#D8E8CC]' : 'border-[#E6C5C9]';
@@ -272,5 +257,3 @@ const Index = () => {
     </div>
   );
 };
-
-export default Index;

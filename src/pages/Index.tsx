@@ -70,7 +70,14 @@ const Index = () => {
         "/lovable-uploads/620b9a4e-d4cc-4ef7-8403-223fccf8b854.png",
         "/lovable-uploads/96654a96-2dab-4d9a-bffd-646388832798.png",
         "/lovable-uploads/dee431ca-b886-4aac-9ff9-fe92aee6a8f1.png",
-        "/lovable-uploads/4fa364cc-05c2-4d1a-b41a-22e2e989aa9d.png"
+        "/lovable-uploads/4fa364cc-05c2-4d1a-b41a-22e2e989aa9d.png",
+        "/lovable-uploads/52a297a7-96da-4966-8681-5d81f129e4e2.png",
+        "/lovable-uploads/c475cc0b-600c-432c-8ef1-19ad998d0c2f.png",
+        "/lovable-uploads/14014bfc-d549-494e-b0f6-d774eaaf26e8.png",
+        "/lovable-uploads/17ccd473-5d5c-4f54-81ed-b12ee556c334.png",
+        "/lovable-uploads/ef3e21f5-571c-4fd7-80b9-b6333abbb389.png",
+        "/lovable-uploads/2a400815-819f-4d0e-a43d-6a594e7b8357.png",
+        "/lovable-uploads/22310c88-5678-4b00-88cf-6eb9c65d68be.png"
       ]
     },
     {

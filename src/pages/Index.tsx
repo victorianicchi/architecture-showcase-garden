@@ -213,14 +213,15 @@ const Index = () => {
                 key={index}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
+                className="flex"
               >
                 {item.link ? (
-                  <Link to={item.link}>
+                  <Link to={item.link} className="w-full">
                     <ProjectCard
                       title={item.title}
                       description={item.description}
                       image={item.image}
-                      className={`overflow-hidden hover:shadow-lg transition-shadow ${borderColorClass}`}
+                      className="w-full aspect-square"
                     />
                   </Link>
                 ) : (
@@ -228,7 +229,7 @@ const Index = () => {
                     title={item.title}
                     description={item.description}
                     image={item.image}
-                    className={`overflow-hidden hover:shadow-lg transition-shadow ${borderColorClass}`}
+                    className="w-full aspect-square"
                   />
                 )}
               </motion.div>

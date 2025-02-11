@@ -11,29 +11,16 @@ const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
   const t = translations[language];
 
-  const inspirations = [
-    {
-      title: "Travel Photography",
-      description: "Capturing architectural wonders around the world",
-      image: "/lovable-uploads/b454fc4e-8b74-4799-a636-2d1e832b729b.png",
-      link: "/travel-photography"
-    },
-    {
-      title: "Collections",
-      description: "Curated boards of innovative designs",
-      image: "/lovable-uploads/bc5c32e2-679b-412b-8088-cdb0b257da98.png"
-    },
-    {
-      title: "Creative Sketches",
-      description: "Hand-drawn architectural concepts",
-      image: "/lovable-uploads/66490511-dcf1-4708-9105-3387f3e3bf27.png"
-    }
-  ];
-
   const projects = [
     {
-      title: "Cultural Center",
-      description: "A modern cultural space integrating library, exhibition areas, and multipurpose rooms with natural light and vegetation",
+      title: {
+        en: "Cultural Center",
+        es: "Centro Cultural"
+      },
+      description: {
+        en: "A modern cultural space integrating library, exhibition areas, and multipurpose rooms with natural light and vegetation",
+        es: "Un espacio cultural moderno que integra biblioteca, áreas de exposición y salas multiusos con luz natural y vegetación"
+      },
       image: "/lovable-uploads/0b08387d-0053-4fb3-95ee-3ac278a64dfe.png",
       additionalImages: [
         "/lovable-uploads/b65d3e67-5f8f-4a23-9c99-49855f610530.png",
@@ -53,8 +40,14 @@ const Index = () => {
       ]
     },
     {
-      title: "Cell Mitosis",
-      description: "A residential complex of 10 units along the Río Luján in Tigre, featuring symmetrical encounters and shared spaces that promote community interaction while preserving privacy",
+      title: {
+        en: "Cell Mitosis",
+        es: "Mitosis Celular"
+      },
+      description: {
+        en: "A residential complex of 10 units along the Río Luján in Tigre, featuring symmetrical encounters and shared spaces that promote community interaction while preserving privacy",
+        es: "Un complejo residencial de 10 unidades a lo largo del Río Luján en Tigre, con encuentros simétricos y espacios compartidos que promueven la interacción comunitaria mientras preservan la privacidad"
+      },
       image: "/lovable-uploads/f06608db-7dd9-490f-8999-f0009bd1fc15.png",
       additionalImages: [
         "/lovable-uploads/686580b6-9c26-4688-9e7e-447118bfca59.png",
@@ -62,8 +55,14 @@ const Index = () => {
       ]
     },
     {
-      title: "Building in Buenos Aires City",
-      description: "An acoustic eco-oasis located in Buenos Aires' Microcenter, featuring a layered architectural approach with a protective glass shield, native vegetation, and a cultural center that revitalizes the urban space",
+      title: {
+        en: "Building in Buenos Aires City",
+        es: "Edificio en Ciudad de Buenos Aires"
+      },
+      description: {
+        en: "An acoustic eco-oasis located in Buenos Aires' Microcenter, featuring a layered architectural approach with a protective glass shield, native vegetation, and a cultural center that revitalizes the urban space",
+        es: "Un oasis eco-acústico ubicado en el Microcentro de Buenos Aires, con un enfoque arquitectónico en capas que incluye una protección de vidrio, vegetación nativa y un centro cultural que revitaliza el espacio urbano"
+      },
       image: "/lovable-uploads/b484ef0e-25c2-4af9-bff8-89e8b35a4c3a.png",
       additionalImages: [
         "/lovable-uploads/7465b23e-10ad-4ec5-bc8e-f19443549ca9.png",
@@ -81,8 +80,14 @@ const Index = () => {
       ]
     },
     {
-      title: "Apartment Remodeling",
-      description: "A minimalist apartment renovation featuring open spaces, natural light, and custom wooden furniture. The design incorporates a seamless blend of living, working, and relaxation areas with panoramic city views",
+      title: {
+        en: "Apartment Remodeling",
+        es: "Remodelación de Apartamento"
+      },
+      description: {
+        en: "A minimalist apartment renovation featuring open spaces, natural light, and custom wooden furniture. The design incorporates a seamless blend of living, working, and relaxation areas with panoramic city views",
+        es: "Una renovación minimalista de apartamento con espacios abiertos, luz natural y muebles de madera a medida. El diseño incorpora una combinación perfecta de áreas de vida, trabajo y relajación con vistas panorámicas de la ciudad"
+      },
       image: "/lovable-uploads/146f99da-70a0-4074-be9a-8001489f756b.png",
       additionalImages: [
         "/lovable-uploads/ff5b9f7b-5649-463f-91bc-e76f536ffebf.png",
@@ -93,8 +98,14 @@ const Index = () => {
       ]
     },
     {
-      title: "Primary School",
-      description: "Living school integrated with nature",
+      title: {
+        en: "Primary School",
+        es: "Escuela Primaria"
+      },
+      description: {
+        en: "Living school integrated with nature",
+        es: "Escuela viva integrada con la naturaleza"
+      },
       image: "/lovable-uploads/9608e8cf-9a8f-496a-81d8-03a35f15dfd2.png",
       additionalImages: [
         "/lovable-uploads/185bb680-1024-4ff7-ab48-52faea4a9dcf.png",
@@ -161,9 +172,16 @@ const Index = () => {
         className="py-20 container mx-auto px-4"
       >
         <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.portfolio}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard
+              key={index}
+              title={project.title[language]}
+              description={project.description[language]}
+              image={project.image}
+              additionalImages={project.additionalImages}
+              className="w-full aspect-[4/3] mx-auto"
+            />
           ))}
         </div>
       </motion.section>

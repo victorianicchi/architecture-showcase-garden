@@ -63,7 +63,16 @@ const TravelPhotography = () => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto"
         >
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center mb-8">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate(-1)}
+              className="mr-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back
+            </Button>
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -77,15 +86,6 @@ const TravelPhotography = () => {
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate(-1)}
-              className="flex items-center gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back
-            </Button>
           </div>
 
           <h1 className="font-playfair text-4xl mb-12 text-center">Travel Photography</h1>

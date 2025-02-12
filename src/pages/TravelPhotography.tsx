@@ -56,7 +56,7 @@ const TravelPhotography = () => {
   return (
     <div className="min-h-screen bg-[#FFDEE2]">
       <Navigation language={language} onLanguageChange={setLanguage} />
-      <div className="p-8">
+      <div className="pt-24 px-8"> {/* Added pt-24 to account for fixed navigation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,11 +66,11 @@ const TravelPhotography = () => {
           <div className="flex items-center mb-8">
             <Button
               variant="ghost"
-              size="sm"
+              size="lg"
               onClick={() => navigate(-1)}
-              className="mr-4"
+              className="mr-4 hover:bg-pink-100"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-5 h-5 mr-2" />
               Back
             </Button>
             <Breadcrumb>

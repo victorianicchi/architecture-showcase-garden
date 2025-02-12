@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -98,6 +99,22 @@ export const ContactForm = ({ language }: ContactFormProps) => {
         >
           <Button variant="outline" size="icon" className="h-12 w-12">
             <Linkedin className="h-6 w-6" />
+          </Button>
+        </a>
+        <a
+          href="https://www.behance.net/vickynicchi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-110 transition-transform"
+        >
+          <Button variant="outline" size="icon" className="h-12 w-12">
+            <svg 
+              viewBox="0 0 24 24" 
+              className="h-6 w-6"
+              fill="currentColor"
+            >
+              <path d="M22 7h-7V2H9v5H2v15h20V7zM9.3 15.4H6v-4.7h3.3c1.3 0 2.3.8 2.3 2.3s-1 2.4-2.3 2.4zm8.6-4.5h-4v1.5h3.8v1.8h-3.8v1.5h4v1.8h-6V9h6v1.9zM9.3 12.4H7.8v1.5h1.5c.4 0 .8-.3.8-.7 0-.5-.4-.8-.8-.8z"/>
+            </svg>
           </Button>
         </a>
       </div>

@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useState } from "react";
@@ -49,6 +50,26 @@ const Index = () => {
   ];
 
   const projects = [
+    {
+      title: {
+        en: "Kitchen and Dining Room Renovation",
+        es: "Renovación de Cocina y Comedor"
+      },
+      description: {
+        en: "A contemporary open-concept renovation featuring sage green cabinetry, natural oak accents, and marble countertops. The design integrates a functional kitchen island with built-in storage and a dining area bathed in natural light.",
+        es: "Una renovación contemporánea de concepto abierto con gabinetes verde salvia, acentos de roble natural y encimeras de mármol. El diseño integra una isla de cocina funcional con almacenamiento incorporado y un área de comedor bañada en luz natural."
+      },
+      image: "/lovable-uploads/50f14c31-3d0e-46fd-b744-5ac964e471b6.png",
+      additionalImages: [
+        "/lovable-uploads/b59c37f6-24e4-46f7-8819-ec1a53df21ef.png",
+        "/lovable-uploads/531be5f5-5750-4562-9aae-0d4e0dc4dc70.png",
+        "/lovable-uploads/9bc58642-ef3c-44cd-a37e-b346f55410ea.png",
+        "/lovable-uploads/0213edc2-717f-4754-ac18-ae156a03453c.png",
+        "/lovable-uploads/44df0335-4b57-4c64-9cce-4183aa324ea2.png",
+        "/lovable-uploads/45849fe6-a1e2-4260-befc-0e3944eb67b0.png",
+        "/lovable-uploads/c13fc1e8-5aee-4bad-aadb-6c6de9bc3eb1.png"
+      ]
+    },
     {
       title: {
         en: "Cultural Center",

@@ -11,7 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 interface ContactFormProps {
   language: "en" | "es";
@@ -79,6 +79,17 @@ export const ContactForm = ({ language }: ContactFormProps) => {
           </form>
         </DialogContent>
       </Dialog>
+
+      {/* Email link added here */}
+      <div className="text-center mt-4">
+        <a 
+          href="mailto:vickynicchi@gmail.com"
+          className="inline-flex items-center gap-2 text-gray-700 hover:text-pink-600 transition-colors"
+        >
+          <Mail className="h-5 w-5" />
+          <span>vickynicchi@gmail.com</span>
+        </a>
+      </div>
 
       <div className="flex gap-4 justify-center mt-6">
         <a

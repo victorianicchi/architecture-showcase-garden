@@ -131,7 +131,7 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
 
       {additionalImages && (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
-          <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-0 overflow-hidden">
+          <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0">
             <Carousel className="w-full relative">
               <CarouselContent>
                 {allImages.map((img, index) => (
@@ -140,7 +140,7 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
                       <LazyImage
                         src={img}
                         alt={`${title} - Image ${index + 1}`}
-                        className="max-w-[90vw] max-h-[85vh] w-auto h-auto object-contain"
+                        className="w-full h-auto max-h-[80vh] object-contain"
                       />
                     </div>
                   </CarouselItem>

@@ -132,7 +132,7 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
       {additionalImages && (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-0">
-            <Carousel className="w-full">
+            <Carousel className="w-full relative">
               <CarouselContent>
                 {allImages.map((img, index) => (
                   <CarouselItem key={index}>
@@ -146,8 +146,14 @@ export const ProjectCard = ({ title, description, image, additionalImages, class
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <div className="absolute inset-0 flex items-center justify-between pointer-events-none px-4">
+                <div className="pointer-events-auto">
+                  <CarouselPrevious className="relative left-0 top-0 translate-y-0 opacity-70 hover:opacity-100" />
+                </div>
+                <div className="pointer-events-auto">
+                  <CarouselNext className="relative right-0 top-0 translate-y-0 opacity-70 hover:opacity-100" />
+                </div>
+              </div>
             </Carousel>
           </DialogContent>
         </Dialog>

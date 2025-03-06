@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useState } from "react";
@@ -11,43 +10,6 @@ import { Link } from "react-router-dom";
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
   const t = translations[language];
-
-  const inspirations = [
-    {
-      title: {
-        en: "Travel Photography",
-        es: "Fotografía de Viajes"
-      },
-      description: {
-        en: "Capturing architectural wonders around the world",
-        es: "Capturando maravillas arquitectónicas alrededor del mundo"
-      },
-      image: "/lovable-uploads/b454fc4e-8b74-4799-a636-2d1e832b729b.png",
-      link: "/travel-photography"
-    },
-    {
-      title: {
-        en: "Collections",
-        es: "Colecciones"
-      },
-      description: {
-        en: "Curated boards of innovative designs",
-        es: "Tableros curados de diseños innovadores"
-      },
-      image: "/lovable-uploads/bc5c32e2-679b-412b-8088-cdb0b257da98.png"
-    },
-    {
-      title: {
-        en: "Creative Sketches",
-        es: "Bocetos Creativos"
-      },
-      description: {
-        en: "Hand-drawn architectural concepts",
-        es: "Conceptos arquitectónicos dibujados a mano"
-      },
-      image: "/lovable-uploads/66490511-dcf1-4708-9105-3387f3e3bf27.png"
-    }
-  ];
 
   const projects = [
     {
@@ -272,47 +234,7 @@ const Index = () => {
         </div>
       </motion.section>
 
-      {/* Creative Inspiration Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        id="inspiration" 
-        className="py-20"
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-4xl mb-12 text-center text-gray-800">{t.creative}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {inspirations.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-                className="flex"
-              >
-                {item.link ? (
-                  <Link to={item.link} className="w-full">
-                    <ProjectCard
-                      title={item.title[language]}
-                      description={item.description[language]}
-                      image={item.image}
-                      className="w-full aspect-square"
-                    />
-                  </Link>
-                ) : (
-                  <ProjectCard
-                    title={item.title[language]}
-                    description={item.description[language]}
-                    image={item.image}
-                    className="w-full aspect-square"
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      {/* Creative Inspiration Section has been removed */}
 
       {/* Contact Section */}
       <motion.section 

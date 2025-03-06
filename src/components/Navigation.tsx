@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { translations } from "@/utils/translations";
@@ -56,7 +57,7 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
         }`}>
           <a href="#portfolio" className="hover:text-pink-600 transition-colors">{t.portfolio}</a>
           <a href="#about" className="hover:text-pink-600 transition-colors">{t.about}</a>
-          <a href="#inspiration" className="hover:text-pink-600 transition-colors">{t.creative}</a>
+          {/* Removed Creative Inspiration link */}
           <a href="#contact" className="hover:text-pink-600 transition-colors">{t.contact}</a>
           <button
             onClick={() => onLanguageChange(language === "en" ? "es" : "en")}
@@ -73,7 +74,7 @@ export const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
             <div className="flex flex-col items-center space-y-4 py-4">
               <a href="#portfolio" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.portfolio}</a>
               <a href="#about" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.about}</a>
-              <a href="#inspiration" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.creative}</a>
+              {/* Removed Creative Inspiration link */}
               <a href="#contact" className="hover:text-pink-600 transition-colors" onClick={() => setIsOpen(false)}>{t.contact}</a>
             </div>
           </div>

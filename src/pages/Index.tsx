@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { motion } from "framer-motion";
 import { ContactForm } from "@/components/ContactForm";
 import { Link } from "react-router-dom";
+import { CreativeItem } from "@/components/CreativeItem";
 
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
@@ -144,6 +145,42 @@ const Index = () => {
     }
   ];
 
+  const creativeItems = [
+    {
+      title: {
+        en: "Architectural Sketch Series",
+        es: "Serie de Bocetos Arquitectónicos"
+      },
+      description: {
+        en: "A collection of hand-drawn architectural sketches exploring form, proportion, and spatial relationships. These studies inform my design approach and capture the essence of spaces before they're fully realized.",
+        es: "Una colección de bocetos arquitectónicos dibujados a mano que exploran la forma, la proporción y las relaciones espaciales. Estos estudios informan mi enfoque de diseño y capturan la esencia de los espacios antes de que se realicen por completo."
+      },
+      image: "/lovable-uploads/211ae5f0-34e9-4dc9-89fc-10eb5b6d841c.png"
+    },
+    {
+      title: {
+        en: "Watercolor Exploration",
+        es: "Exploración en Acuarela"
+      },
+      description: {
+        en: "A series of watercolor paintings exploring light, texture, and atmosphere. These works inform my understanding of how natural light interacts with architectural spaces and materials.",
+        es: "Una serie de pinturas en acuarela que exploran la luz, la textura y la atmósfera. Estos trabajos informan mi comprensión de cómo la luz natural interactúa con los espacios y materiales arquitectónicos."
+      },
+      image: "/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
+    },
+    {
+      title: {
+        en: "Urban Photography",
+        es: "Fotografía Urbana"
+      },
+      description: {
+        en: "Photographic studies of urban environments focusing on the interplay between built structures, natural elements, and human interaction. These images capture moments that inspire architectural thinking.",
+        es: "Estudios fotográficos de entornos urbanos centrados en la interacción entre estructuras construidas, elementos naturales e interacción humana. Estas imágenes capturan momentos que inspiran el pensamiento arquitectónico."
+      },
+      image: "/lovable-uploads/af75e989-9f66-4cf0-b51b-3ff107f40e12.png"
+    }
+  ];
+
   const borderColorClass = language === 'es' ? 'border-[#D8E8CC]' : 'border-[#E6C5C9]';
 
   return (
@@ -206,6 +243,32 @@ const Index = () => {
         </div>
       </motion.section>
 
+      {/* Creative Inspiration Section */}
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        id="creative"
+        className="py-20 container mx-auto px-4"
+      >
+        <h2 className="font-playfair text-4xl mb-6 text-center text-gray-800">{t.creative}</h2>
+        <p className="text-gray-700 max-w-3xl mx-auto text-center mb-12">
+          {t.creativeText}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {creativeItems.map((item, index) => (
+            <CreativeItem
+              key={index}
+              title={item.title[language]}
+              description={item.description[language]}
+              image={item.image}
+              className="h-full"
+            />
+          ))}
+        </div>
+      </motion.section>
+
       {/* About Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
@@ -233,8 +296,6 @@ const Index = () => {
           </div>
         </div>
       </motion.section>
-
-      {/* Creative Inspiration Section has been removed */}
 
       {/* Contact Section */}
       <motion.section 

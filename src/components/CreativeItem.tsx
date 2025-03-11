@@ -2,12 +2,18 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
+import { Link, ExternalLink, Youtube, Image } from "lucide-react";
 
 interface CreativeItemProps {
   title: string;
   description: string;
   image: string;
   className?: string;
+  links?: Array<{
+    type: "youtube" | "website" | "pinterest" | "archdaily";
+    url: string;
+    title: string;
+  }>;
 }
 
 export const CreativeItem = ({
@@ -15,8 +21,22 @@ export const CreativeItem = ({
   description,
   image,
   className,
+  links,
 }: CreativeItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const getLinkIcon = (type: string) => {
+    switch (type) {
+      case "youtube":
+        return <Youtube size={18} className="mr-2" />;
+      case "pinterest":
+        return <Image size={18} className="mr-2" />;
+      case "archdaily":
+        return <Link size={18} className="mr-2" />;
+      default:
+        return <ExternalLink size={18} className="mr-2" />;
+    }
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -49,7 +69,27 @@ export const CreativeItem = ({
           </div>
           <div>
             <h3 className="font-playfair text-2xl mb-4">{title}</h3>
-            <p className="text-gray-700">{description}</p>
+            <p className="text-gray-700 mb-6">{description}</p>
+            
+            {links && links.length > 0 && (
+              <div className="space-y-3">
+                <h4 className="font-medium text-lg mb-2">Explore More:</h4>
+                <div className="flex flex-col gap-3">
+                  {links.map((link, index) => (
+                    <a 
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                      {getLinkIcon(link.type)}
+                      {link.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>

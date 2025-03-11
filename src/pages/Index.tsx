@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/Navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useState } from "react";
@@ -159,14 +160,36 @@ const Index = () => {
     },
     {
       title: {
-        en: "Watercolor Exploration",
-        es: "Exploración en Acuarela"
+        en: "Architecture Inspiration",
+        es: "Inspiración Arquitectónica"
       },
       description: {
-        en: "A series of watercolor paintings exploring light, texture, and atmosphere. These works inform my understanding of how natural light interacts with architectural spaces and materials.",
-        es: "Una serie de pinturas en acuarela que exploran la luz, la textura y la atmósfera. Estos trabajos informan mi comprensión de cómo la luz natural interactúa con los espacios y materiales arquitectónicos."
+        en: "A curated collection of architectural resources that inspire my work. From innovative building techniques to sustainable design principles, these links showcase the diverse influences that shape my architectural vision.",
+        es: "Una colección curada de recursos arquitectónicos que inspiran mi trabajo. Desde técnicas de construcción innovadoras hasta principios de diseño sostenible, estos enlaces muestran las diversas influencias que dan forma a mi visión arquitectónica."
       },
-      image: "/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png"
+      image: "/lovable-uploads/0e5673d4-1315-40e7-860e-fc1b89b0e6ab.png",
+      links: [
+        {
+          type: "youtube",
+          url: "https://www.youtube.com/channel/UCLAZvtxUPnD5oJKPpC0M_bA",
+          title: "Architectural Digest - Innovative Building Design"
+        },
+        {
+          type: "archdaily",
+          url: "https://www.archdaily.com/",
+          title: "ArchDaily - Latest Architectural Projects"
+        },
+        {
+          type: "pinterest",
+          url: "https://www.pinterest.com/search/pins/?q=sustainable%20architecture",
+          title: "Pinterest - Sustainable Architecture Ideas"
+        },
+        {
+          type: "website",
+          url: "https://www.dezeen.com/",
+          title: "Dezeen - Contemporary Architecture"
+        }
+      ]
     },
     {
       title: {

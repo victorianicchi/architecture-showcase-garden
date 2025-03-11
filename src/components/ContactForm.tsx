@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Instagram, Linkedin, Mail } from "lucide-react";
@@ -24,6 +23,14 @@ export const ContactForm = ({ language }: ContactFormProps) => {
       </div>
 
       <div className="flex gap-4 justify-center mt-6">
+        <a
+          href="mailto:vickynicchi@gmail.com"
+          className="hover:scale-110 transition-transform"
+        >
+          <Button variant="outline" size="icon" className="h-12 w-12">
+            <Mail className="h-6 w-6" />
+          </Button>
+        </a>
         <a
           href="https://instagram.com/__vickynicchi"
           target="_blank"
